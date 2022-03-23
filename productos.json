@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nombre": "Brahma",
+        "precio":200,
+        "stock": 70,
+        "img":"brahma lata.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Heineken",
+        "precio":230,
+        "stock": 50,
+        "img":"heineken lata.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Quilmes",
+        "precio":210,
+        "stock": 90,
+        "img":"quilmes lata.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Budweiser",
+        "precio":250,
+        "stock": 45,
+        "img":"budweiser lata.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Cordoba",
+        "precio":180,
+        "stock": 100,
+        "img":"cordoba lata.jpg"
+    }
+]
