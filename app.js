@@ -137,3 +137,33 @@ window.onload = function(){
     renderCarrito()
   }
 }
+function mostrarProductos(){
+  let divProductos = document.getElementById("divProductos")
+ divProductos.innerHTML="";
+ fetch('./JSON/productos.json')
+.then(res=>res.JSON())
+.then(productos=>{
+  
+  productos.forEach((productos, indice)=>{
+    
+    divProductos.innerHTML +=`
+    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+    <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-primary">${productos.nombre},${productos.id}</h5>
+              <img src="./img/${productos.img}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text text-white-50 description">${productos.stock}</p>
+                <h5 class="text-primary">Precio: <span class="precio">$ ${productos.precio}</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+    `
+  })
+})
+}
+mostrarProductos()
